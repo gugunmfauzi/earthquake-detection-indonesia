@@ -1,7 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-from docutils.nodes import description
-from urllib3 import request
 
 Description = "To get lastest information eathquake from BMKG.go.id"
 
