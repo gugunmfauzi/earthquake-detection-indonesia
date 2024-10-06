@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 # Metadata proyek
 setup(
-    name='liveearthquakeindonesia',  # Nama package Anda
+    name='livrearthquakeindonesia',  # Nama package Anda
     version='0.0.8',  # Versi package
     description='This package will get the latest earthquake form BMKG (Agency from Indonesia)',  # Deskripsi singkat
     long_description=open('README.md').read(),  # File README yang berisi deskripsi lebih lengkap
