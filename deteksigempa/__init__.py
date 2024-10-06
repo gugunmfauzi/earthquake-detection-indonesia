@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from urllib3 import request
 
-Description = "To get information eathquake from BMKG.go.id"
+Description = "To get lastest information eathquake from BMKG.go.id"
 
 def ekstraksi_data():
     """
