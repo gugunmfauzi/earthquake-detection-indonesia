@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from docutils.nodes import description
 from urllib3 import request
 
 Description = "To get lastest information eathquake from BMKG.go.id"
@@ -74,5 +75,6 @@ def tampilkan_data(result):
     print(f"Dirasakan {result['Dirasakan']}")
 
 if __name__ == '__main__':
+    print('Description', Description)
     result = ekstraksi_data()
     tampilkan_data(result)
