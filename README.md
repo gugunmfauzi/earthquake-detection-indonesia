@@ -9,7 +9,8 @@ This package will use BeautifulSoup4 and Request, to produce output in the form 
 
 ## How To Use
 
-```import deteksigempa
+```
+import deteksigempa
 
 gempa_di_indonesia = deteksigempa.deteksigempa('https://bmkg.go.id')
 gempa_di_indonesia.tampilkan_keterangan()
