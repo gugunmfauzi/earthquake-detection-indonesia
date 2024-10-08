@@ -12,11 +12,11 @@ setup(
     author_email='gugunmfauzi16@gmail.com',  # Email Anda
     url='https://github.com/gugunmfauzi/earthquake-detection-indonesia',  # URL repositori proyek (opsional)
     packages=find_packages(),  # Menggunakan fungsi find_packages untuk menemukan seluruh subpackage
-    install_requires=[
+    install_requires={
         # Daftar dependencies atau package yang dibutuhkan oleh proyek Anda
         'numpy',
         'pandas',
-    ],
+    },
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',  # Atau lisensi yang sesuai dengan project Anda
