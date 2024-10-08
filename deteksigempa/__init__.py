@@ -3,15 +3,39 @@ from bs4 import BeautifulSoup
 """
 Method = fungsi
 filed/atribute = variable
+constructor = method yang dipanggil pertama kali saat object diciptakan. gunakan untuk mendeklarasikan semua variabel
+pada class ini
 """
 
-class deteksigempa:
-    def __init__(self, url):
-        self.Description = 'To get lastest information eathquake from BMKG.go.id'
+class Bencana :
+    def __init__(self, url, Description):
+        self.Description = Description
         self.result = None
         self.url = url
+    def tampilkan_keterangan(self):
+        print(self.Description)
 
-    def ekstraksi_data(self):
+    def scraping_data(self):
+        print('Not yet implemented')
+    def tampilkan_data(self):
+        print('Not yet implemented')
+    def run(self):
+        self.scraping_data()
+        self.tampilkan_data()
+
+class deteksibanjir(Bencana):
+    def __init__(self, url):
+        super(deteksibanjir, self).__init__(url,
+                                            'Not yet Implementation, but it should return last flood '
+                                            'in Indonesia')
+    def tampilkan_keterangan(self):
+        print(f'UNDER CONTRUCTION {self.Description}')
+
+class deteksigempa(Bencana):
+    def __init__(self, url):
+        super(deteksigempa, self).__init__(url, 'To get lastest information eathquake from BMKG.go.id')
+
+    def scraping_data(self):
         """
         Tanggal : 21 September 2024
         Waktu : 06:26:20 WIB
@@ -84,12 +108,25 @@ class deteksigempa:
         print(f"Dirasakan {self.result['Dirasakan']}")
 
     def run(self):
-        self.ekstraksi_data()
+        self.scraping_data()
         self.tampilkan_data()
+
+
 
 if __name__ == '__main__':
     gempa_di_indonesia = deteksigempa('https://bmkg.go.id')
-    print('Description', gempa_di_indonesia.Description)
+    gempa_di_indonesia.tampilkan_keterangan()
     gempa_di_indonesia.run()
+
+    banjir_di_indonesia = deteksibanjir('Not yet')
+    banjir_di_indonesia.tampilkan_keterangan()
+    banjir_di_indonesia.run()
+
+    daftar_bencana = [gempa_di_indonesia, banjir_di_indonesia]
+    print('\nSemua bencana yang ada')
+    for bencana in daftar_bencana:
+        bencana.tampilkan_keterangan()
+
+
     # gempa_di_indonesia.ekstraksi_data()
     # gempa_di_indonesia.tampilkan_data()
