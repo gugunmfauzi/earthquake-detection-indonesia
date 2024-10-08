@@ -9,13 +9,11 @@ This package will use BeautifulSoup4 and Request, to produce output in the form 
 
 ## How To Use
 
-```
-import gempaterkini
+```import deteksigempa
 
-if __name__ == "__main__":
-    print("Aplikasi Utama")
-    result = gempaterkini.ekstraksi_data()
-    gempaterkini.tampilkan_data(result)
+gempa_di_indonesia = deteksigempa.deteksigempa('https://bmkg.go.id')
+gempa_di_indonesia.tampilkan_keterangan()
+gempa_di_indonesia.run()
 ```
 
 ## Author
